@@ -1,7 +1,7 @@
 object MyAssembly:
   private def formatResult(name: String, n: Int, f:Int => Int) =
     val msg = "the %s of %d is %d"
-    msg.format(name, n, factorial(n))
+    msg.format(name, n, f(n))
   
   def factorial(x: Int): Int = 
     def go (x: Int, acc: Int): Int =
