@@ -18,7 +18,11 @@ object MyAssembly:
       else loop(n + 1)
     }
     loop(0)
-     
+
+  //Ex. 2.3
+  def curry[A, B, C](f: (A, B) => C): A => (B => C) =
+    (a: A) => ((b: B) => f(a,b))
+
 
   @main def printFac: Unit =
     println(formatResult("factorial", 4, factorial))
